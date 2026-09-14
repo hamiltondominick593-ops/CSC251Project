@@ -1,82 +1,80 @@
 public class Policy
 {
    private String policyNumber;
-      private String providerName;
-          private String firstName;
-             private String lastName;
-               private int age; 
-                  private String smokingStatus;
-                     private double height;
-                        private double weight;
-   
-   // no arg constructor 
+   private String providerName;
+   private String firstName;
+   private String lastName;
+   private int age;
+   private String smokingStatus;
+   private double height;
+   private double weight;
+
    public Policy()
    {
       policyNumber = "";
       providerName = "";
-      firstName = ""; 
+      firstName = "";
       lastName = "";
       age = 0;
       smokingStatus = "";
       height = 0.0;
       weight = 0.0;
    }
-   
-   // Constructor with arguments
-   public Policy(String pNumber, String provider, String fName, String lName, int a, String smoking, double h, double w)
-   
+
+   public Policy(String policyNumber, String providerName,
+                 String firstName, String lastName, int age,
+                 String smokingStatus, double height, double weight)
    {
-      policyNumber = pNumber;
-      providerName = provider;
-      firstName = fName;
-      lastName = lName;
-      age = a;
-      smokingStatus = smoking; 
-      height = h; 
-      weight = w;
-   }
-   
-   // Setters
-      public void setPolicyNumber(String pNumber)
-      {
-         policyNumber = pNumber;
-      }
-      
-      public void setProvideName(String provider)
-      {
-         providerName = provider;
-      }
-      
-      public void setFirstName(String fName)
-      {
-         firstName = fName;
-      }
-      public void setLastName(String lName)
-      {
-         lastName = lName;
-      }
-      
-      public void setAge(int a)
-   {
-      age = a;
+      this.policyNumber = policyNumber;
+      this.providerName = providerName;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+      this.smokingStatus = smokingStatus;
+      this.height = height;
+      this.weight = weight;
    }
 
-   public void setSmokingStatus(String smoking)
+   public void setPolicyNumber(String policyNumber)
    {
-      smokingStatus = smoking;
+      this.policyNumber = policyNumber;
    }
 
-   public void setHeight(double h)
+   public void setProviderName(String providerName)
    {
-      height = h;
+      this.providerName = providerName;
    }
 
-   public void setWeight(double w)
+   public void setFirstName(String firstName)
    {
-      weight = w;
+      this.firstName = firstName;
    }
 
-   // Getters
+   public void setLastName(String lastName)
+   {
+      this.lastName = lastName;
+   }
+
+   public void setAge(int age)
+   {
+      this.age = age;
+   }
+
+   public void setSmokingStatus(String smokingStatus)
+   {
+      this.smokingStatus = smokingStatus;
+   }
+
+   public void setHeight(double height)
+   {
+      this.height = height;
+   }
+
+   public void setWeight(double weight)
+   {
+      this.weight = weight;
+   }
+
    public String getPolicyNumber()
    {
       return policyNumber;
@@ -117,28 +115,26 @@ public class Policy
       return weight;
    }
 
-   // Calculate BMI
    public double getBMI()
    {
       return (weight * 703) / (height * height);
    }
 
-   // Calculate insurance policy price
    public double getPolicyPrice()
    {
       double price = 600.0;
 
-      if(age > 50)
+      if (age > 50)
       {
          price += 75.0;
       }
 
-      if(smokingStatus.equalsIgnoreCase("smoker"))
+      if (smokingStatus.equalsIgnoreCase("smoker"))
       {
          price += 100.0;
       }
 
-      if(getBMI() > 35)
+      if (getBMI() > 35)
       {
          price += (getBMI() - 35) * 20;
       }
@@ -146,5 +142,3 @@ public class Policy
       return price;
    }
 }
-      
-                  
