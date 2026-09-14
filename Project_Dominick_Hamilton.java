@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Project_Dominick_Hamilton{
-   
+public class Project_Dominick_Hamilton
+{
    public static void main(String[] args)
    {
       Scanner keyboard = new Scanner(System.in);
@@ -46,5 +46,7 @@ public class Project_Dominick_Hamilton{
       System.out.println("Policyholder's Weight: " + policy.getWeight() + " pounds");
       System.out.printf("Policyholder's BMI: %.2f%n", policy.getBMI());
       System.out.printf("Policy Price: $%.2f%n", policy.getPolicyPrice());
+
+      keyboard.close();
    }
 }
