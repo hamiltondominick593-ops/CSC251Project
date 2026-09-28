@@ -1,4 +1,3 @@
-public class Policy
 import java.io.*;
 
 /**
